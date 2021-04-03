@@ -1,0 +1,26 @@
+.main-title {
+  text-align: center;
+}
+
+.main-title h2 {
+  font-family: Avenir Heavy;
+  font-size: 40px;
+  margin: 0 auto;
+  max-width: 413px;
+}
+.main-title h2:not(:last-child) {
+  margin-bottom: 58px;
+}
+.main-title h2.success {
+  color: var(--success);
+}
+.main-title h2.error {
+  color: var(--error);
+}
+
+.main-title h3 {
+  font-family: Avenir Book;
+  font-size: 36px;
+  margin: 0 auto;
+  width: 764px;
+}

@@ -1,0 +1,91 @@
+.card-state {
+  text-align: center;
+}
+
+.card-state__animation {
+  width: 640px;
+  height: 640px;
+  margin: 0 auto;
+}
+
+.card-state__error {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border: 1px solid;
+  border-color: var(--error);
+  border-radius: 5px;
+}
+.card-state__error:before {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 1px;
+  background-color: var(--error);
+  transform: rotate(45deg);
+}
+.card-state__error:after {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 1px;
+  background-color: var(--error);
+  transform: rotate(-45deg);
+}
+
+.card-state__success {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border: 1px solid;
+  border-color: var(--success);
+  border-radius: 5px;
+}
+.card-state__success:before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 1px;
+  background-color: var(--success);
+  transform: rotate(45deg) translate(-3px, 15px);
+}
+.card-state__success:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  background-color: var(--success);
+  transform: rotate(-45deg) translate(10px, 9px);
+}
+
+.card-state__text {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 110px;
+  margin-bottom: 250px;
+  box-sizing: border-box;
+  width: 330px;
+  padding: 58px 40px;
+  height: 150px;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+.card-state__text p {
+  margin: 0;
+  font-family: Avenir Book;
+  font-size: 24px;
+}
+
+.card-state__text p.success {
+  color: var(--success);
+}
+
+.card-state__text p.error {
+  color: var(--error);
+}

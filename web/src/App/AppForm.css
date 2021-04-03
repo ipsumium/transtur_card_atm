@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Avenir Book";
+  src: url("../assets/fonts/Avenir-Book.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Avenir Heavy";
+  src: url("../assets/fonts/Avenir-Heavy.ttf") format("truetype");
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --error: #bb2c2c;
+  --success: #259e47;
+}
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 100px;
+}
