@@ -29,8 +29,8 @@ export default function CardStateComponent(props: Props) {
     <div className="card-state">
       {state === "loading" && (
         <svg
-          width="100"
-          height="100"
+          width="130"
+          height="130"
           viewBox="0 0 38 38"
           xmlns="http://www.w3.org/2000/svg"
           stroke="#9F9F9F"
@@ -58,6 +58,7 @@ export default function CardStateComponent(props: Props) {
       <div className="card-state__text">
         {language === "en" && (
           <motion.p
+            className={state}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}
@@ -67,6 +68,7 @@ export default function CardStateComponent(props: Props) {
         )}
         {language === "ro" && (
           <motion.p
+            className={state}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -40 }}

@@ -81,3 +81,11 @@
   font-family: Avenir Book;
   font-size: 24px;
 }
+
+.card-state__text p.success {
+  color: var(--success);
+}
+
+.card-state__text p.error {
+  color: var(--error);
+}

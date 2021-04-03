@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // import { ReactReduxContext } from 'react-redux'
 import { useSelector } from "react-redux";
 import "./AppForm.css";
@@ -15,15 +15,60 @@ const AppForm = () => {
   const [language, setLanguage] = useState("en");
   const [state, setState] = useState("default");
 
-  setTimeout(() => {
-    if (language === "en") {
-      setLanguage("ro");
-    } else {
-      setLanguage("en");
-    }
-  }, 5000);
+  useEffect(() => {
+    setTimeout(() => {
+      if (language === "en") {
+        setLanguage("ro");
+      } else {
+        setLanguage("en");
+      }
+    }, 5000);
+  }, [language]);
 
-  // console.log(trEn(cardState.cardStateText), trRo(cardState.cardStateText));
+  useEffect(() => {
+    const waitingCard = cardStateText.localeCompare("Waiting a card") === 0;
+    if (waitingCard) {
+      setState("default");
+    }
+
+    const checkingCardReaders =
+      cardStateText.localeCompare("Checking card readers") === 0;
+    const readingCard = cardStateText.localeCompare("Reading the card") === 0;
+    const savingOnFile =
+      cardStateText.localeCompare("Saving card data into a file") === 0;
+    const uploadingOnFTP =
+      cardStateText.localeCompare("Uploading a file on FTP") === 0;
+    const parsingDataCard =
+      cardStateText.localeCompare("Parsing Card Data") === 0;
+
+    if (
+      checkingCardReaders ||
+      readingCard ||
+      savingOnFile ||
+      uploadingOnFTP ||
+      parsingDataCard
+    ) {
+      setState("loading");
+    }
+
+    const unknownCard = cardStateText.localeCompare("Unknown") === 0;
+    const ftpUploadFailure =
+      cardStateText.localeCompare("FTP upload failure") === 0;
+    const saveFileFailure =
+      cardStateText.localeCompare("Save file failure") === 0;
+    const readFail = cardStateText.includes("error");
+
+    if (unknownCard || ftpUploadFailure || saveFileFailure || readFail) {
+      setState("error");
+    }
+
+    const completed =
+      cardStateText.localeCompare("Completed. Take your card.") === 0;
+
+    if (completed) {
+      setState("success");
+    }
+  }, [cardStateText]);
 
   return (
     <main>
