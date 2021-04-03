@@ -1,19 +1,18 @@
 import React from "react";
 import "./TitleSection.css";
 import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
 
 interface Props {
-  title?: string;
-  subtitle?: {
+  title: string;
+  subtitle: {
     en: string;
     ro: string;
   };
+  language: string;
 }
 
 export default function TitleSection(props: Props) {
-  const { language } = useSelector((state) => state) as any;
-  const { title, subtitle } = props;
+  const { title, subtitle, language } = props;
   const { en: subtitleEn, ro: subtitleRo } = subtitle;
 
   return (

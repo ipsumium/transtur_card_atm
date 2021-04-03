@@ -11,7 +11,7 @@
   --white: #fff;
   --black: #000;
   --error: #bb2c2c;
-  --success: 259e47;
+  --success: #259e47;
 }
 .app {
   width: 100vw;
@@ -30,9 +30,4 @@ main {
   flex-direction: column;
   justify-content: space-between;
   padding-top: 100px;
-}
-.animation-gif {
-  width: 640px;
-  height: 640px;
-  margin: 0 auto;
 }

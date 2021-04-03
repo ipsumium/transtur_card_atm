@@ -8,10 +8,16 @@
   margin: 0 auto;
   max-width: 413px;
 }
+.main-title h2:not(:last-child) {
+  margin-bottom: 58px;
+}
+.main-title h2.success {
+  color: var(--success);
+}
 
 .main-title h3 {
   font-family: Avenir Book;
   font-size: 36px;
   margin: 0 auto;
-  max-width: 764px;
+  width: 764px;
 }

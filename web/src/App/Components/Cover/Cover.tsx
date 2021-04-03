@@ -2,18 +2,17 @@ import * as React from "react";
 import "./Cover.css";
 import Truck from "../../../assets/images/truck.jpg";
 import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
 
 interface Props {
-  title?: {
+  language: string;
+  title: {
     en: string;
     ro: string;
   };
 }
 
 function Cover(props: Props) {
-  const { language } = useSelector((state) => state) as any;
-  const { title } = props;
+  const { title, language } = props;
   const { en: titleInEn, ro: titleInRo } = title;
 
   return (

@@ -30,8 +30,8 @@ export default {
     },
   },
   subTitle: {
-    default: null,
-    loading: null,
+    default: undefined,
+    loading: undefined,
     success: {
       en: "The card was succesfully scaned and saved.",
       ro: "A fost efectuat cu success scanarea și salvarea fișierului.",
