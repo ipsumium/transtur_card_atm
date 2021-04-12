@@ -1,7 +1,7 @@
 export default {
   coverTitle: {
     en: "Efficiency in motion.",
-    ro: "Eficiență în mișcare.",
+    ro: "Eficienta in miscare.",
   },
   infoTitle: {
     en: "TAHO.RO",
@@ -9,16 +9,16 @@ export default {
   },
   infoSubtitle: {
     en: "Download your .ddd file and activity report",
-    ro: "Descarci aici automat cardul de șofer",
+    ro: "Descarci aici automat cardul de sofer",
   },
   mainTitle: {
     default: {
       en: "Insert your card in the reader bellow",
-      ro: "Inserați cardul în cititorul de mai jos",
+      ro: "Inserati cardul in cititorul de mai jos",
     },
     loading: {
       en: "Please wait",
-      ro: "Vă rugăm să așteptați",
+      ro: "Va rugam sa asteptati",
     },
     success: {
       en: "Success",
@@ -34,12 +34,12 @@ export default {
     loading: undefined,
     success: {
       en: "The card was succesfully scaned and saved.",
-      ro: "A fost efectuat cu success scanarea și salvarea fișierului.",
+      ro: "A fost efectuat cu success scanarea si salvarea fisierului.",
     },
     error: {
       en: "Try re-inserting the card again.",
       ro:
-        "Încercați să scoateți cardul iar după un scurt timp să-l reintroduceți din nou.",
+        "Incercati sa scoateti cardul iar dupa un scurt timp sa-l reintroduceti din nou.",
     },
   },
 };
